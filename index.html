@@ -7,6 +7,157 @@
     <title>Cugino's Italian Eatery</title>
 </head>
 <body>
-    
+    <header className="page-header">
+			
+        <h1 className="page-header__title">Cugino's Italian Eatery</h1>
+      
+    </header>
+
+    <main role="main" className="main-content">
+        <article>
+            <p  className="main-content__summary">This restaurant features various traditional italian dishes just like your grandmother used to make. Whether it's pizza, pasta, or a salad, Cugino's has what you like.</p>
+
+            {/* react requires that we close every tag even self closing tags but, closing an <hr> tag like <hr /> is not supposed to be a good practice so, I chose to use a closing tag like </hr> for example for all self closing tags like <br>, <image> etc */}
+        </article>
+        <hr></hr>
+
+        <div className="flexbox-wrapper">
+
+            <div className="flexbox-wrapper__col-left">
+
+                <article>
+                    <section className="contact-section">
+                        <h2 className="contact-section__title">Address</h2>
+                        <div className="contact-section__address">
+                            215 New Rd.<br></br>
+                            Philadelphia<br></br>
+                            19129						
+                        </div>
+
+                        <h2 className="contact-section__title">Phone</h2>
+                        <div className="contact-section__phone">
+                            <p className="contact-section__phone__number">215-213-1010</p>
+                        </div>
+                    </section>
+                </article>	
+                {/* end of contact-section */}
+
+                <section className="opening-hours">
+                    <div className="opening-hours__days">		
+                        <p><strong>Mon</strong></p>
+                        <p><strong>Tue</strong></p>
+                        <p><strong>Wed</strong></p>
+                        <p><strong>Thu</strong></p>
+                        <p><strong>Fri</strong></p>
+                        <p><strong>Sat</strong></p>
+                        <p><strong>Sun</strong></p>
+                    </div>
+
+                    <div className="opening-hours__time-wrapper">
+                        <time className="opening-hours__time">Closed</time>	
+                        <time className="opening-hours__time">Closed</time>	
+                        <time className="opening-hours__time">5:30 pm - 10:30pm</time>
+                        <time className="opening-hours__time">5:30 pm - 10:30pm</time>
+                        <time className="opening-hours__time">5:30 pm - 10:30pm</time>
+                        <time className="opening-hours__time">5:30 pm - 10:30pm</time>
+                        <time className="opening-hours__time">5:30 pm - 10:30pm</time>
+                    </div> 
+                </section>
+
+            </div>
+            {/* end of and opening hours section  */}
+
+            <div className="flexbox-wrapper__col-right">
+                <article className="add-wrapper">
+
+                    <section className="nav-section">
+
+                        <nav className="nav">
+                            <div className="nav__elements">
+                                <ul className="nav__list">
+
+                                    <li className="nav__list-element"><button type="button" className="nav__nav-btn nav__nav-btn--left"><i className="fas fa-camera"/>Add Photo</button></li>
+
+                                    <li className="nav__list-element"><button type="button" className="nav__nav-btn"><i className="fas fa-share"/>Share</button></li>
+
+                                    <li className="nav__list-element"><button type="button" className="nav__nav-btn nav__nav-btn--right"><i className="fas fa-bookmark"/>Bookmark</button></li>
+                                
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </section>
+                    {/* end of nav-section */}
+
+                    <section className="add-section">
+                        <figure className="add-block">
+                            
+                            <img src={pizza} className="add-block__main-image" alt="pizza"></img>
+                            
+
+                            <figcaption className="add-block__caption">
+                                <img src={chef} className="add-block__thumbnail" alt="chef"></img> 
+                                <div className="add-block__description">1/2 roasted onion...the <br></br>sweetest onions...by Tracy W.</div>
+                            
+                            </figcaption>
+                        
+                        </figure>
+        
+                    </section>
+                </article>
+            </div>	
+            {/* end of add-section */}
+        </div> 
+        <hr></hr>
+        
+        <section className="review-section">
+            {/* I could have used a span instead of h2 here but, I tought this is an important information and should be given same level of importance as address and contact. Also h2 will make sure that this information won't get ingnored by search engines and screen readers */}
+
+            <div className="review-section__wrapper">
+
+                <h2  className="review-section__title">500 total reviews</h2>
+
+                <fieldset className="review-section__fieldset">
+
+                    <ul className="review-section__rating">
+                        <li className="review-section__star">
+                            <input type="radio" name="rating" value="1" id="1-star" className="review-section__input"></input>
+                            <label htmlFor="1-star" className="review-section__label"></label>
+                        </li>
+
+                        <li className="review-section__star">
+                            <input type="radio" name="rating" value="2"  id="2-star" className="review-section__input"></input>
+                            <label htmlFor="2-star" className="review-section__label"></label>
+                        </li>
+
+                        <li className="review-section__star">
+                            <input type="radio" name="rating" value="3"  id="3-star" className="review-section__input"></input>
+                            <label htmlFor="3-star" className="review-section__label"></label>
+                            
+                        </li>
+
+                        <li className="review-section__star">
+                            <input type="radio" name="rating" value="4"  id="4-star" className="review-section__input"></input>
+                            <label htmlFor="4-star" className="review-section__label"></label>
+                        </li>
+
+                        <li className="review-section__star">
+                            <input type="radio" name="rating" value="5" id="5-star" className="review-section__input"></input>
+                            <label htmlFor="5-star" className="review-section__label"></label>
+                        </li>
+                    </ul>
+            
+                </fieldset>
+            </div>
+
+            <div className="review-section__button-wrapper">
+
+            </div>
+            <button type="button"  className="review-section__button"><Ionicon icon="md-star"  className="review-section__icon" fontSize="17px"></Ionicon>Write a Review</button>
+        
+        </section>
+
+        {/* end of review section */}
+    </main>
 </body>
 </html>
